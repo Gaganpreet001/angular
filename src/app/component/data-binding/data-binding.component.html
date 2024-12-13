@@ -1,0 +1,39 @@
+<div>
+    <div class="col-4">
+        <h1>
+            One way data Binding 
+        </h1>
+       <br>
+        <div>
+            <h2>
+                <!-- this  is called data interpolation-->
+            {{courseName}}
+            </h2>
+            <div>
+                this is a checkbox<input type="{{inputType}}"/>
+            </div>
+<br>
+            <div>
+                another method : property binding ie sending property of one variable to this div or vice versa
+                <br>
+                <!-- here what i have done is i have created a custom styling class in scss file and given that property
+                 in ts file to some variable and i can use that variable anywhere where i want that styling -->
+                <div class="{{classProperty}}">Hello this is property Binding using data interpolation</div>
+                <br>
+                <div [class]="classProperty"> this is property binding</div>
+            </div>
+            <br>
+            <div>
+                Event-Binding - sending data from html to ts
+                <br>
+                <br>
+                <!-- <button class="bg-second" (click)="showAlert('hey you clicked the Event-Binding button which replaces js click fn')">Show Welcome</button> -->
+                 <button>Event-Binding</button>
+                 <span (click)="showAlert('this is span')">click me </span>
+            </div>
+        <div>Two way data-binding</div>
+        <button (click)="changeCourseName()">Changed course</button>
+        <input type="text" value="{{courseName}}">
+        </div>
+    </div>
+</div>
